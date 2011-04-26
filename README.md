@@ -52,6 +52,7 @@ file used to generate the html for all pages on the site.
 ### extras.js
 
 Placing this script on every page ensures accurate and efficient functionality of the Convert software.
+
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/extras.js"></script>
 
 * This extras.js script MUST be implemented after the setup.js script in the previous step.
