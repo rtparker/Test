@@ -17,6 +17,9 @@ The following are required configuration files in any production environment
 Convert Script Tags (setup.js and extras.js)
 --------------------------------------------
 
+
+### setup.js
+
 setup.js is the file that connects the site back to the convertlets servers. A page should have setup.js somewhere preferably in the head.
 JavaScript tags must be added to each page of the website. 
 
@@ -44,6 +47,9 @@ file used to generate the html for all pages on the site.
 
 * Avoid placing this script within other HTML tags. (i.e. <div>,<map>,<font>, or even another <script>).
 * NEVER enclose this script within <form></form> HTML tags.
+
+
+### extras.js
 
 Placing this script on every page ensures accurate and efficient functionality of the Convert software.
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/extras.js"></script>
