@@ -73,7 +73,6 @@ analytics, recommendation and profiling engines
         }
     </script>
 
-
 * Add shopping cart variables.
     
     <script type="text/javascript">
