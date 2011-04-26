@@ -47,7 +47,9 @@ file used to generate the html for all pages on the site.
 
 * Avoid placing this script within other HTML tags. (i.e. <div>,<map>,<font>, or even another <script>).
 * NEVER enclose this script within <form></form> HTML tags.
-* Placing this script on every page ensures accurate and efficient functionality of the Convert software.
+
+
+Placing this script on every page ensures accurate and efficient functionality of the Convert software.
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/extras.js"></script>
 
 * This extras.js script MUST be implemented after the setup.js script in the previous step.
