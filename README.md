@@ -32,10 +32,15 @@ in one or more template files that generate or apply to all pages of the website
 Just as Web Analytics applications uses a script tag to track general information about site traffic, the
 Convert client uses a similar methodology to manage a significantly broader set of dynamic capabilities with a single,
 unified tag, including:
+
 * Track Visitor page and site activity 
+
 * Deliver custom content in the form of Convert Engagements 
+
 * Pass Visitor data (form responses, etc.) into Convert Visitor Records 
+
 * Track the results of every Convert Campaign
+
 The following JavaScript tags are the only components that need to be added to enable the Convert client.
 Ideally, in cases where the site is dynamically generated, these tags would be added into a global template
 file used to generate the html for all pages on the site.
@@ -43,7 +48,9 @@ file used to generate the html for all pages on the site.
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/setup.js"></script>
 
 * Avoid placing this script within other HTML tags. (i.e. <div>,<map>,<font>, or even another <script>).
+
 * NEVER enclose this script within <form></form> HTML tags.
+
 * Placing this script on every page ensures accurate and efficient functionality of the Convert software.
 
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/extras.js"></script>
