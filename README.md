@@ -67,12 +67,14 @@ analytics, recommendation and profiling engines
 *  Initialize convert_cart. This step has to be done once per page. and should be on all shopping cart pages before any other
 shopping cart information is added
 
+
     <script type="text/javascript">
       if(!window.convert_cart){
         window.convert_cart={};
         convert_cart.shoppingCartItems=new Array();
       }
     </script>
+
 
 * Add shopping cart variables.
     
