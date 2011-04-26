@@ -14,11 +14,8 @@ The following are required configuration files in any production environment
 * [recommendation.properties](https://github.com/convert/recommmender/blob/master/README.org)
   Please see the recommendation pacakge for recommendation.properties configurations options
 
-Javascript and Tagging
-----------------------
-The following is the specification of the javascript website tagging requirments.
-
-### Convert Scrript Tags (setup.js)
+Convert Script Tags (setup.js and extras.js)
+--------------------------------------------
 
 setup.js is the file that connects the site back to the convertlets servers. A page should have setup.js somewhere preferably in the head.
 JavaScript tags must be added to each page of the website. 
@@ -48,14 +45,14 @@ file used to generate the html for all pages on the site.
 * Avoid placing this script within other HTML tags. (i.e. <div>,<map>,<font>, or even another <script>).
 * NEVER enclose this script within <form></form> HTML tags.
 
-
 Placing this script on every page ensures accurate and efficient functionality of the Convert software.
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/extras.js"></script>
 
 * This extras.js script MUST be implemented after the setup.js script in the previous step.
 
 
-### Shopping Cart Tagging
+Shopping Cart Tagging
+--------------------
 
 Shopping Cart tagging is optional however it allows us to collect shopping cart information for our 
 analytics, recommendation and profiling engines
