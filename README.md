@@ -42,8 +42,11 @@ The following JavaScript tags are the only components that need to be added to e
 Ideally, in cases where the site is dynamically generated, these tags would be added into a global template
 file used to generate the html for all pages on the site.
 
-    <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/setup.js"></script>
-
+    <script type="text/javascript">
+        var cvtSiteName = "@@YOUR_SITENAME@@";
+        var cvtJsHost = (("https:" == document.location.protocol) ? "https://convertglobal.s3.amazonaws.com/" : "http://cdn.convertglobal.com/");
+        document.write(unescape("%3Cscript src='" + cvtJsHost + cvtSiteName + "/setup.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 
 * Avoid placing this script within other HTML tags. (i.e. div,map,font, or even another script).
 * NEVER enclose this script within form/form HTML tags.
@@ -53,7 +56,9 @@ file used to generate the html for all pages on the site.
 
 Placing this script on every page ensures accurate and efficient functionality of the Convert software.
 
-    <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/extras.js"></script>
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript src='" + cvtJsHost + cvtSiteName + "/extras.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 
 * This extras.js script MUST be implemented after the setup.js script in the previous step.
 
