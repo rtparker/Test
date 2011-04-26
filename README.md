@@ -34,11 +34,8 @@ Convert client uses a similar methodology to manage a significantly broader set 
 unified tag, including:
 
 * Track Visitor page and site activity 
-
 * Deliver custom content in the form of Convert Engagements 
-
 * Pass Visitor data (form responses, etc.) into Convert Visitor Records 
-
 * Track the results of every Convert Campaign
 
 The following JavaScript tags are the only components that need to be added to enable the Convert client.
