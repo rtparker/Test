@@ -99,3 +99,36 @@ On order Confirmation Page.
       convert_cart.isPurchased=true;
     </script>
 
+
+
+Profile Tagging
+---------------
+
+Below, we have provided script variables that are designed to extract variables such as Visitor's First Name, Last Name, Email, etc.
+These script variables need to be placed on any page where the variables are available. Please note that variables in the format of
+@@VariableName@@ will need to be replaced by real values.
+
+    <script type="text/javascript">
+        var convert_profile = {};
+        convert_profile.firstName = "@@firstname@@";
+        convert_profile.lastName = "@@lastname@@";
+        convert_profile.email = "@@email@@";
+        convert_profile.login = "@@login@@";
+    </script>
+
+We use these variables to collect information to allow Marketing Teams to create personalization campaigns for visitors using this data.
+You may want to consider additional variables (ex. zipcode, customertype, etc.) so they may be available for future campaign development.
+All captured data is stored in an individual visitor record, which can be used later as part of campaign definition, segmentation,
+email campaigs or other visitor communications.
+
+Below is an example format for creating additional variables: 
+
+    <script type="text/javascript">
+        convert_profile.zipcode =  "@@zipcode@@";
+        convert_profile.customertype = "@@customertype@@";
+        convert_profile.variableName= "@@value@@"; /*This type of line can be repeated for any number of custom variables*/
+    </script>
+
+* variableName should be replaced with the name of the parameter.
+* Replace variables like “@@value@@” with the corresponding value.
+
