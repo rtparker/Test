@@ -45,8 +45,8 @@ file used to generate the html for all pages on the site.
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/setup.js"></script>
 
 
-* Avoid placing this script within other HTML tags. (i.e. <div>,<map>,<font>, or even another <script>).
-* NEVER enclose this script within <form></form> HTML tags.
+* Avoid placing this script within other HTML tags. (i.e. div,map,font, or even another script).
+* NEVER enclose this script within form/form HTML tags.
 
 
 ### extras.js
