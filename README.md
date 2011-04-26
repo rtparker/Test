@@ -64,8 +64,7 @@ Shopping Cart Tagging
 Shopping Cart tagging is optional however it allows us to collect shopping cart information for our 
 analytics, recommendation and profiling engines
 
-*  Initialize convert_cart. This step has to be done once per page. and should be on all shopping cart pages before any other
-shopping cart information is added
+*  Initialize convert_cart. This step has to be done once per page. and should be on all shopping cart pages before any other shopping cart information is added
 
     <script type="text/javascript">
         if(!window.convert_cart){
