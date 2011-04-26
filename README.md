@@ -39,13 +39,55 @@ unified tag, including:
 The following JavaScript tags are the only components that need to be added to enable the Convert client.
 Ideally, in cases where the site is dynamically generated, these tags would be added into a global template
 file used to generate the html for all pages on the site.
+
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/setup.js"></script>
+
 * Avoid placing this script within other HTML tags. (i.e. <div>,<map>,<font>, or even another <script>).
 * NEVER enclose this script within <form></form> HTML tags.
 * Placing this script on every page ensures accurate and efficient functionality of the Convert software.
+
     <script type="text/javascript" src="https://convertglobal.s3.amazonaws.com/audax/extras.js"></script>
+
 * This extras.js script MUST be implemented after the setup.js script in the previous step.
 
 ### Shopping Cart Tagging
 
+Shopping Cart tagging is optional however it allows us to collect shopping cart information for our 
+analytics, recommendation and profiling engines
+
+*  Initialize convert_cart. This step has to be done once per page. and should be on all shopping cart pages before any other
+shopping cart information is added
+
+    <script type="text/javascript">
+      if(!window.convert_cart){
+        window.convert_cart={};
+        convert_cart.shoppingCartItems=new Array();
+      }
+    </script>
+
+* Add shopping cart variables.
+    
+    <script type="text/javascript">
+      convert_cart.totalCost="@@TOTAL_COST@@";
+      convert_cart.taxes=@@TAXES@@;
+      convert_cart.discount=@@DISCOUNT@@;
+      convert_cart.shipping=@@SHIPPING@@;
+      convert_cart.promoCode="@@PROMO_CODE@@";
+      convert_cart.orderId="@@ORDER_ID@@";
+
+      //loop on items in the shopping cart
+      //loop start
+        var convert_item={};
+        convert_item.sku="@@SKU@@";
+        convert_item.quantity=@@QUANTITY@@;
+        convert_item.price="@@PRICE@@";
+        convert_cart.shoppingCartItems.push(convert_item);
+      //loop end
+    </script>
+
+* On order Confirmation Page.
+
+    <script type="text/javascript">
+      convert_cart.isPurchased=true;
+    </script>
 
