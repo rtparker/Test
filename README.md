@@ -50,6 +50,7 @@ file used to generate the html for all pages on the site.
 
 * This extras.js script MUST be implemented after the setup.js script in the previous step.
 
+
 ### Shopping Cart Tagging
 
 Shopping Cart tagging is optional however it allows us to collect shopping cart information for our 
